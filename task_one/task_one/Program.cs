@@ -36,20 +36,17 @@ namespace task_one
                 // проверка на корретность символов
                 foreach(char c in log)
                 {
-                    int position = (int)c;
-                    if ((position < 97 || position > 122) && (position < 48 || position > 57))
+                    if (!char.IsLetterOrDigit(c))
                     {
                         return false;
                     }
                 }
                 // проверка на последовательность
-                for (int i = login.Length - 2; i > 0; i--)
+                for (int i = login.Length - 2; i >=0; i--)
                 {
-                    int position = login[i];
-                    int previosPosition = login[i+1];
-                    if (position > 47 && position < 58) //буква
+                    if (char.IsDigit(login[i])) //буква
                     {
-                        if (previosPosition > 96 && previosPosition < 123)
+                        if (char.IsLetter(login[i+1]))
                             return false;
                     }
                 }
