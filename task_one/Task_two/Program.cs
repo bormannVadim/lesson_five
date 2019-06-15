@@ -10,7 +10,7 @@ namespace Task_two
             // Савенко В.Р.
             // Задание 2 класс Message
             Console.WriteLine("Введите текс:");
-            string Text = Console.ReadLine(); // по идеи нужно удалить всё, что не буквы и не пробелы
+            string Text = Console.ReadLine(); 
 
             string AnalyzeText = Message.RemoveNotLetters(Text);
 
